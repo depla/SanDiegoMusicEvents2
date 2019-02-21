@@ -36,7 +36,7 @@ public class MainActivity extends ListActivity {
         //
 
         eventsListView = findViewById(R.id.eventsListView);
-        setListAdapter(new ArrayAdapter<>(this, R.layout.music_event_list_item, allMusicEvents));
+        setListAdapter(new MusicEventListAdapter(this, R.layout.music_event_list_item, allMusicEvents));
         //setContentView(R.layout.activity_main);
     }
 
