@@ -19,6 +19,13 @@ import java.util.List;
 
 import edu.miracostacollege.cs134.sandiegomusicevents.model.MusicEvent;
 
+
+/**
+ * custom adapter for the custom layout we are using for each ListView item
+ *
+ * @author Dennis La
+ * @version 1.0
+ */
 public class MusicEventListAdapter extends ArrayAdapter<MusicEvent>
 {
 
@@ -28,7 +35,12 @@ public class MusicEventListAdapter extends ArrayAdapter<MusicEvent>
     private List<MusicEvent> mAllEvents;
 
 
-
+    /**
+     * constructor for the adapter
+     * @param context MainActivity since it calls this constructor
+     * @param resource the music_event_list_item.xml file
+     * @param objects a list of MusicEvents
+     */
     //this constructor is being called by MainActivity
     public MusicEventListAdapter(@NonNull Context context, int resource, @NonNull List<MusicEvent> objects) {
         super(context, resource, objects);
@@ -44,6 +56,13 @@ public class MusicEventListAdapter extends ArrayAdapter<MusicEvent>
     //ctrl + o => override
 
 
+    /**
+     * inflates the custom layout and fills the image view and text views
+     * @param position position of the list items
+     * @param convertView
+     * @param parent parent of the views on the custom layout
+     * @return the custom view
+     */
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

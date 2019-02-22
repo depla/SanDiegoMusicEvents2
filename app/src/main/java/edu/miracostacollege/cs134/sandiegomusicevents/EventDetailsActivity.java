@@ -12,6 +12,13 @@ import android.widget.TextView;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * shows the user more information about the selected music event
+ *
+ * @author Dennis La
+ * @version 2.0
+ */
+
 public class EventDetailsActivity extends AppCompatActivity {
 
 
@@ -25,6 +32,11 @@ public class EventDetailsActivity extends AppCompatActivity {
 
     public static final String TAG = EventDetailsActivity.class.getName();
 
+    /**
+     * gets the intent from MainActivity and uses it to populate the views to show
+     * the user information about the music event
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

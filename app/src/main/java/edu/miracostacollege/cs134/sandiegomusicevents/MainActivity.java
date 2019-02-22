@@ -15,6 +15,12 @@ import java.util.List;
 import edu.miracostacollege.cs134.sandiegomusicevents.model.JSONLoader;
 import edu.miracostacollege.cs134.sandiegomusicevents.model.MusicEvent;
 
+/**
+ * shows the user the list of music events
+ *
+ * @author Dennis La
+ * @version 2.0
+ */
 public class MainActivity extends ListActivity {
 
     private ListView eventsListView;
@@ -22,6 +28,11 @@ public class MainActivity extends ListActivity {
     //create a list of music events(these will be loaded from JSON)
     List<MusicEvent> allMusicEvents;
 
+    /**
+     * loads data from JSON file and uses it to populate the list view by calling the
+     * MusicEventListAdapter using the music_event_list_item layout.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +51,14 @@ public class MainActivity extends ListActivity {
         //setContentView(R.layout.activity_main);
     }
 
+    /**
+     * uses the position clicked as an index for the List of <MusicEvent>. puts the data of that
+     * event into an intent and starts the EventDetailsActivity
+     * @param l
+     * @param v
+     * @param position position of clicked list item
+     * @param id
+     */
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         Intent detailsIntent = new Intent(this, EventDetailsActivity.class);
